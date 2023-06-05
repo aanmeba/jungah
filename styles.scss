@@ -1,0 +1,120 @@
+@use "./mixins/mixins";
+@use "./theme/theme" as theme;
+
+body {
+  margin: 0 auto;
+  width: 80vw;
+  // font-family: "Roboto", sans-serif;
+  // font-family: "Open Sans", sans-serif;
+  // font-family: "Bebas Neue", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  color: theme.$para-text;
+  line-height: 1.5;
+  // box-sizing: border-box;
+}
+
+.nav {
+  background-color: antiquewhite;
+  ul {
+    @include mixins.ul-flex;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.section {
+  padding: 3rem;
+
+  &__title {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    border: 2px solid salmon;
+    padding: 2rem 0 0 4rem;
+  }
+
+  &--intro {
+    height: 80vh;
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: "Ubuntu", sans-serif;
+    max-width: 700px;
+
+    &__title {
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    &__text {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+  }
+  &--projects {
+    background-color: lightgoldenrodyellow;
+  }
+  &--tech {
+    background-color: lightgreen;
+  }
+  &--about {
+    background-color: lightsteelblue;
+  }
+
+  @include mixins.large-screen {
+    display: flex;
+
+    &__title {
+      width: 150px;
+      margin-right: 50px;
+      text-align: right;
+    }
+
+    &__content {
+      padding: 0;
+      border: 2px solid black;
+      width: 100%;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  &__category {
+    &__label {
+      font-family: "Bebas Neue", sans-serif;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+
+  .social {
+    @include mixins.ul-flex;
+    // width: 100%;
+    // justify-content: space-evenly;
+    margin: 0;
+    &__item {
+      padding: 1rem;
+      text-transform: uppercase;
+    }
+  }
+}
