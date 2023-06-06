@@ -26,19 +26,19 @@ https://github.com/nology-tech/uruguay-consultancy/blob/main/projects/portfolio/
 
 - use emoji as an image, not an emoji itself
 
+## What to do
+
+- add projects
+- tech stacks -> 2x2 in a very narrow screen
+
 ## Reference
 
-https://www.kchn.com.au/product-design.html
 https://www.astnly.com/#projects
-https://www.lars-olson.com/
 https://brittanychiang.com/#projects
 
-- https://v1.brittanychiang.com/
-- https://v2.brittanychiang.com/
 - https://v3.brittanychiang.com/
 
 https://coolors.co/
-
 https://preview.themeforest.net/item/ukko-personal-portfolio-html-template/full_screen_preview/25150317?_ga=2.175334818.1423750017.1685689990-1449706585.1685689990
 
 ### font

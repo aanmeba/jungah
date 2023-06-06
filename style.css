@@ -2,17 +2,29 @@ body {
   margin: 0 auto;
   width: 80vw;
   font-family: "Roboto Condensed", sans-serif;
-  color: #444452;
+  color: #131954;
   line-height: 1.5;
 }
 
 .nav {
-  background-color: antiquewhite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f5f5;
 }
 .nav ul {
   display: flex;
   list-style-type: none;
   padding-left: 0;
+  justify-content: space-around;
+}
+.nav ul a {
+  text-decoration: none;
+  color: #444452;
+}
+.nav ul a:hover {
+  color: #30f6af;
 }
 
 .bold {
@@ -26,39 +38,37 @@ body {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 0.08rem;
   text-transform: uppercase;
+  color: #30f6af;
+  margin: 0;
 }
 .section__content {
-  border: 2px solid salmon;
   padding: 2rem 0 0 4rem;
 }
 .section--intro {
   height: 80vh;
-  background-color: lightpink;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: "Ubuntu", sans-serif;
   max-width: 700px;
 }
-.section--intro__title {
-  font-size: 3rem;
-  margin-bottom: 2.5rem;
+.section--intro__heading {
   font-weight: 300;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.section--intro__subheading {
+  margin: 2rem 0 0 0;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 .section--intro__text {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1rem;
+  margin: 0;
+  color: #696970;
 }
-.section--projects {
-  background-color: lightgoldenrodyellow;
-}
-.section--tech {
-  background-color: lightgreen;
-}
-.section--about {
-  background-color: lightsteelblue;
-}
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 881px) {
   .section {
     display: flex;
   }
@@ -69,23 +79,87 @@ body {
   }
   .section__content {
     padding: 0;
-    border: 2px solid black;
     width: 100%;
   }
+}
+@media only screen and (max-width: 550px) {
+  .section__content {
+    padding: 2rem 0 0 2rem;
+  }
+}
+
+.project__screenshot img {
+  width: 100%;
+}
+.project__content {
+  width: 90%;
+  margin: 0 auto;
+}
+.project__content__header {
+  display: flex;
+  justify-content: space-between;
+}
+.project__content__links {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  align-items: center;
+}
+.project__content__links li {
+  margin-right: 0.7rem;
+}
+.project__content__links li a {
+  text-decoration: none;
+}
+.project__content__stacks {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+.project__content__stacks li {
+  margin-right: 0.7rem;
+  font-size: 0.8rem;
+  color: #4f5385;
 }
 
 .skills {
   display: flex;
   justify-content: space-between;
 }
+.skills__category {
+  margin: 0 0.5rem 1rem 0;
+}
 .skills__category__label {
   font-family: "Bebas Neue", sans-serif;
+  margin: 0;
 }
 .skills ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   padding: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 551px) and (max-width: 720px) {
+  .skills {
+    flex-wrap: wrap;
+  }
+  .skills__category {
+    width: 47%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .skills {
+    flex-wrap: wrap;
+  }
+  .skills__category {
+    width: 90%;
+  }
+}
+
+.about p {
+  margin-top: 0;
 }
 
 footer {

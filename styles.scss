@@ -8,15 +8,28 @@ body {
   // font-family: "Open Sans", sans-serif;
   // font-family: "Bebas Neue", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
-  color: theme.$para-text;
+  color: theme.$bright-navy;
   line-height: 1.5;
   // box-sizing: border-box;
 }
 
 .nav {
-  background-color: antiquewhite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: theme.$white;
   ul {
     @include mixins.ul-flex;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      color: theme.$para-text;
+      &:hover {
+        color: theme.$highlighter;
+        // transform
+      }
+    }
   }
 }
 
@@ -31,16 +44,18 @@ body {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
+    color: theme.$highlighter;
+    margin: 0;
   }
 
   &__content {
-    border: 2px solid salmon;
+    // border: 2px solid salmon;
     padding: 2rem 0 0 4rem;
   }
 
   &--intro {
     height: 80vh;
-    background-color: lightpink;
+    // background-color: lightpink;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,24 +63,31 @@ body {
     font-family: "Ubuntu", sans-serif;
     max-width: 700px;
 
-    &__title {
-      font-size: 3rem;
-      margin-bottom: 2.5rem;
+    &__heading {
       font-weight: 300;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    &__subheading {
+      margin: 2rem 0 0 0;
+      font-weight: 300;
+      font-size: 1.5rem;
     }
     &__text {
       font-weight: 300;
-      font-size: 2rem;
+      font-size: 1rem;
+      margin: 0;
+      color: theme.$desc-text;
     }
   }
   &--projects {
-    background-color: lightgoldenrodyellow;
+    // background-color: lightgoldenrodyellow;
   }
   &--tech {
-    background-color: lightgreen;
+    // background-color: lightgreen;
   }
   &--about {
-    background-color: lightsteelblue;
+    // background-color: lightsteelblue;
   }
 
   @include mixins.large-screen {
@@ -79,8 +101,52 @@ body {
 
     &__content {
       padding: 0;
-      border: 2px solid black;
+      // border: 2px solid black;
       width: 100%;
+    }
+  }
+
+  @include mixins.extra-small-screen {
+    &__content {
+      // border: 2px solid hotpink;
+      padding: 2rem 0 0 2rem;
+    }
+  }
+}
+
+.project {
+  &__screenshot {
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__links {
+      @include mixins.ul-flex;
+      align-items: center;
+      li {
+        margin-right: 0.7rem;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__stacks {
+      @include mixins.ul-flex;
+      flex-wrap: wrap;
+      li {
+        margin-right: 0.7rem;
+        font-size: 0.8rem;
+        color: theme.$light-navy;
+      }
     }
   }
 }
@@ -89,8 +155,11 @@ body {
   display: flex;
   justify-content: space-between;
   &__category {
+    margin: 0 0.5rem 1rem 0;
+
     &__label {
       font-family: "Bebas Neue", sans-serif;
+      margin: 0;
     }
   }
   ul {
@@ -98,6 +167,29 @@ body {
     flex-direction: column;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+  }
+
+  @include mixins.narrow-screen {
+    flex-wrap: wrap;
+
+    &__category {
+      width: 47%;
+    }
+  }
+
+  @include mixins.extra-small-screen {
+    flex-wrap: wrap;
+    &__category {
+      width: 90%;
+    }
+  }
+}
+
+.about {
+  p {
+    margin-top: 0;
+    // text-align: justify;
   }
 }
 

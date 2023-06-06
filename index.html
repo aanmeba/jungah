@@ -12,35 +12,38 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&family=Roboto+Condensed&family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./index.js"></script>
   </head>
   <body>
     <header>
       <nav class="nav">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Tech Stacks</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#tech">Tech Stacks</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="intro" class="section section--intro">
-        <h1 class="section--intro__title">Hello world!</h1>
-        <h2 class="section--intro__text">
-          I'm
-          <span class="bold">Jungah Ahn</span>, a junior full-stack developer
-          based in Sydney, Australia with experience in building web
-          applications mainly using React.js and Ruby on Rails 👩🏻‍💻
-        </h2>
-      </section>
-      <section id="projects" class="section section--projects">
-        <h2 class="section__title">projects</h2>
-        <!-- main projects 4-6 -->
-        <div class="section__content">projects section</div>
+        <h1 class="section--intro__heading">
+          Hello, I'm <span class="bold">Jungah Ahn</span>👩🏻‍💻
+        </h1>
+        <h2 class="section--intro__subheading">Junior full-stack developer</h2>
+        <p class="section--intro__text">
+          <i class="fa-solid fa-location-dot"></i> Sydney, Australia
+        </p>
       </section>
       <section id="tech" class="section section--tech">
-        <h2 class="section__title">tech</h2>
+        <h2 class="section__title">tech stacks</h2>
         <div class="section__content">
           <div class="skills">
             <div class="skills__category">
@@ -84,6 +87,56 @@
           </div>
         </div>
       </section>
+      <section id="projects" class="section section--projects">
+        <h2 class="section__title">projects</h2>
+        <div class="section__content">
+          <div class="project">
+            <div class="project__screenshot">
+              <img src="./img/img_ilink.png" alt="ilink" />
+            </div>
+            <div class="project__content">
+              <div class="project__content__header">
+                <h3 class="project__content__title">iLink</h3>
+                <ul class="project__content__links">
+                  <li>
+                    <a
+                      href="https://github.com/teamilink"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ilinkapp.netlify.app/"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-solid fa-rocket"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="project__content__specs">
+                <p class="project__content__desc">
+                  A full stack app inspired by Linktree using React.js for
+                  frontend and Rails API for backend, deployed with netlify for
+                  frontend and heroku for backend
+                </p>
+                <ul class="project__content__stacks">
+                  <li>React.js</li>
+                  <li>Ruby on Rails</li>
+                  <li>PostgreSQL</li>
+                  <li>PostCSS</li>
+                  <li>MUI</li>
+                  <li>Heroku</li>
+                  <li>Netlify</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="section section--about">
         <h2 class="section__title">about</h2>
         <div class="section__content">
@@ -98,7 +151,7 @@
               I enjoy running and trail running. You can see me running or
               volunteering (almost) every Saturday at Rhodes Parkrun. In 2023,
               I've done my first 50 km trail running race in the Blue Mountains
-              on May and I'll complete my first full marathorn (42.195 km) on
+              on May and I'll complete my first full marathorn, 42.195 km, on
               September. Wish me luck!
             </p>
           </div>
@@ -108,13 +161,17 @@
     <footer>
       <ul class="social">
         <li class="social__item">
-          <a href="https://www.github.com/aanmeba">Github</a>
+          <a href="https://www.github.com/aanmeba"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/ajungah">LinkedIn</a>
+          <a href="https://www.linkedin.com/ajungah"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
         </li>
         <li class="social__item">
-          <a href="https://www.google.com/">Resume</a>
+          <a href="https://www.google.com/"><i class="fa-solid fa-file"></i></a>
         </li>
       </ul>
       <p class="copyright">© Jungah Ahn 2023</p>
