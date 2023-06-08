@@ -57,32 +57,28 @@ body {
   }
 
   &__content {
-    // border: 2px solid hotpink;
     padding: 2rem 0 0 2rem;
   }
 
   @include mixins.tablet {
-    background-color: aliceblue;
-    // display: block;
   }
 
   @include mixins.tablet-landscape {
-    @include mixins.section-landscape-layout(3rem, lightblue);
+    @include mixins.section-landscape-layout(3rem);
   }
 
   @include mixins.desktop {
-    @include mixins.section-landscape-layout(7rem, lightskyblue);
+    @include mixins.section-landscape-layout(7rem);
   }
 
   &--intro {
     height: 80vh;
-    // background-color: lightpink;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     font-family: "Ubuntu", sans-serif;
-    // max-width: 700px;
 
     &__heading {
       font-weight: 300;
@@ -101,38 +97,6 @@ body {
       color: theme.$desc-text;
     }
   }
-  &--projects {
-    // background-color: lightgoldenrodyellow;
-  }
-  &--tech {
-    // background-color: lightgreen;
-  }
-  &--about {
-    // background-color: lightsteelblue;
-  }
-
-  // @include mixins.large-screen {
-  //   display: flex;
-
-  //   &__title {
-  //     width: 150px;
-  //     margin-right: 50px;
-  //     text-align: right;
-  //   }
-
-  //   &__content {
-  //     padding: 0;
-  //     // border: 2px solid black;
-  //     width: 100%;
-  //   }
-  // }
-
-  // @include mixins.extra-small-screen {
-  //   &__content {
-  //     // border: 2px solid hotpink;
-  //     padding: 2rem 0 0 2rem;
-  //   }
-  // }
 }
 
 .about {
@@ -150,8 +114,7 @@ footer {
 
   .social {
     @include mixins.ul-flex;
-    // width: 100%;
-    // justify-content: space-evenly;
+
     margin: 0;
     &__item {
       padding: 1rem;

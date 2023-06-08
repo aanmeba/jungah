@@ -29,36 +29,18 @@
 
   @include mixins.tablet {
     &__category {
-      // margin: 0 0.5rem 1rem 0;
       width: 47%;
     }
   }
 
   @include mixins.tablet-landscape {
     &__category {
-      // margin: 0 0.5rem 1rem 0;
       width: 47%;
     }
   }
   @include mixins.desktop {
     &__category {
-      // margin: 0 0.5rem 1rem 0;
       width: 47%;
     }
   }
-
-  // @include mixins.narrow-screen {
-  //   flex-wrap: wrap;
-
-  //   &__category {
-  //     width: 47%;
-  //   }
-  // }
-
-  // @include mixins.extra-small-screen {
-  //   flex-wrap: wrap;
-  //   &__category {
-  //     width: 90%;
-  //   }
-  // }
 }

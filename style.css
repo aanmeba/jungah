@@ -131,14 +131,9 @@ body {
 .section__content {
   padding: 2rem 0 0 2rem;
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .section {
-    background-color: aliceblue;
-  }
-}
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .section {
-    background-color: lightblue;
+    background-color: white;
     display: flex;
     padding: 3rem;
   }
@@ -154,7 +149,7 @@ body {
 }
 @media only screen and (min-width: 1025px) {
   .section {
-    background-color: lightskyblue;
+    background-color: white;
     display: flex;
     padding: 7rem;
   }
@@ -191,6 +186,7 @@ body {
   margin: 0;
   color: #696970;
 }
+
 .about p {
   margin-top: 0;
 }

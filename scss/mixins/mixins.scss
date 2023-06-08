@@ -27,7 +27,7 @@
   }
 }
 
-@mixin section-landscape-layout($padding, $bg) {
+@mixin section-landscape-layout($padding, $bg: white) {
   background-color: $bg;
   display: flex;
   padding: $padding;
