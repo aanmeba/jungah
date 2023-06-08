@@ -1,0 +1,64 @@
+@use "../mixins/mixins";
+@use "../theme/theme" as theme;
+@use "../theme/sizes" as sizes;
+
+.stacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__category {
+    width: 90%;
+    margin-bottom: 2rem;
+
+    &__label {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: sizes.$text-label;
+      line-height: sizes.$line-height;
+      margin: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include mixins.tablet {
+    &__category {
+      // margin: 0 0.5rem 1rem 0;
+      width: 47%;
+    }
+  }
+
+  @include mixins.tablet-landscape {
+    &__category {
+      // margin: 0 0.5rem 1rem 0;
+      width: 47%;
+    }
+  }
+  @include mixins.desktop {
+    &__category {
+      // margin: 0 0.5rem 1rem 0;
+      width: 47%;
+    }
+  }
+
+  // @include mixins.narrow-screen {
+  //   flex-wrap: wrap;
+
+  //   &__category {
+  //     width: 47%;
+  //   }
+  // }
+
+  // @include mixins.extra-small-screen {
+  //   flex-wrap: wrap;
+  //   &__category {
+  //     width: 90%;
+  //   }
+  // }
+}

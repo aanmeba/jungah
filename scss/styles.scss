@@ -2,16 +2,22 @@
 @use "./theme/theme" as theme;
 @use "./theme/sizes" as sizes;
 
+@use "./modules/projects.scss";
+@use "./modules/skills.scss";
+
 body {
   margin: 0 auto;
-  width: 80vw;
-  // font-family: "Roboto", sans-serif;
-  // font-family: "Open Sans", sans-serif;
-  // font-family: "Bebas Neue", sans-serif;
+
   font-family: "Roboto Condensed", sans-serif;
   color: theme.$bright-navy;
-  line-height: sizes.$line-height;
-  // box-sizing: border-box;
+  // line-height: sizes.$line-height;
+
+  @include mixins.tablet-landscape {
+    width: 90vw;
+  }
+  @include mixins.desktop {
+    width: 1024px;
+  }
 }
 
 .nav {
@@ -28,7 +34,6 @@ body {
       color: theme.$para-text;
       &:hover {
         color: theme.$highlighter;
-        // transform
       }
     }
   }
@@ -39,7 +44,7 @@ body {
 }
 
 .section {
-  padding: 3rem;
+  padding: 3rem 2rem;
 
   &__title {
     font-family: "Bebas Neue", sans-serif;
@@ -52,8 +57,21 @@ body {
   }
 
   &__content {
-    // border: 2px solid salmon;
-    padding: 2rem 0 0 4rem;
+    // border: 2px solid hotpink;
+    padding: 2rem 0 0 2rem;
+  }
+
+  @include mixins.tablet {
+    background-color: aliceblue;
+    // display: block;
+  }
+
+  @include mixins.tablet-landscape {
+    @include mixins.section-landscape-layout(3rem, lightblue);
+  }
+
+  @include mixins.desktop {
+    @include mixins.section-landscape-layout(7rem, lightskyblue);
   }
 
   &--intro {
@@ -64,7 +82,7 @@ body {
     justify-content: center;
 
     font-family: "Ubuntu", sans-serif;
-    max-width: 700px;
+    // max-width: 700px;
 
     &__heading {
       font-weight: 300;
@@ -93,109 +111,28 @@ body {
     // background-color: lightsteelblue;
   }
 
-  @include mixins.large-screen {
-    display: flex;
+  // @include mixins.large-screen {
+  //   display: flex;
 
-    &__title {
-      width: 150px;
-      margin-right: 50px;
-      text-align: right;
-    }
+  //   &__title {
+  //     width: 150px;
+  //     margin-right: 50px;
+  //     text-align: right;
+  //   }
 
-    &__content {
-      padding: 0;
-      // border: 2px solid black;
-      width: 100%;
-    }
-  }
+  //   &__content {
+  //     padding: 0;
+  //     // border: 2px solid black;
+  //     width: 100%;
+  //   }
+  // }
 
-  @include mixins.extra-small-screen {
-    &__content {
-      // border: 2px solid hotpink;
-      padding: 2rem 0 0 2rem;
-    }
-  }
-}
-
-.project {
-  &__screenshot {
-    img {
-      width: 100%;
-    }
-  }
-  &__content {
-    width: 90%;
-    margin: 0 auto;
-
-    &__title {
-      font-family: "Bebas Neue", sans-serif;
-      margin: 0;
-    }
-    &__header {
-      display: flex;
-      justify-content: space-between;
-    }
-    &__links {
-      @include mixins.ul-flex;
-      align-items: center;
-      margin: 0;
-      li {
-        margin-right: 0.7rem;
-
-        a {
-          text-decoration: none;
-        }
-      }
-    }
-
-    &__stacks {
-      @include mixins.ul-flex;
-      flex-wrap: wrap;
-      li {
-        margin-right: 0.7rem;
-        font-size: sizes.$text-small;
-        color: theme.$light-navy;
-      }
-    }
-  }
-}
-
-.skills {
-  display: flex;
-  justify-content: space-between;
-  &__category {
-    margin: 0 0.5rem 1rem 0;
-
-    &__label {
-      font-family: "Bebas Neue", sans-serif;
-      font-size: sizes.$text-label;
-      line-height: sizes.$line-height;
-      // font-size: 1.4rem;
-      margin: 0;
-    }
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  @include mixins.narrow-screen {
-    flex-wrap: wrap;
-
-    &__category {
-      width: 47%;
-    }
-  }
-
-  @include mixins.extra-small-screen {
-    flex-wrap: wrap;
-    &__category {
-      width: 90%;
-    }
-  }
+  // @include mixins.extra-small-screen {
+  //   &__content {
+  //     // border: 2px solid hotpink;
+  //     padding: 2rem 0 0 2rem;
+  //   }
+  // }
 }
 
 .about {

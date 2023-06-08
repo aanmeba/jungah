@@ -6,50 +6,39 @@
   padding-left: 0;
 }
 
-@mixin large-screen {
-  @media only screen and (min-width: size.$md) {
+// 481px - 767px
+@mixin tablet {
+  @media only screen and (min-width: (size.$sm + 1px)) and (max-width: size.$md) {
     @content;
   }
 }
 
-@mixin narrow-screen {
-  @media only screen and (min-width: (size.$xs + 1px)) and (max-width: size.$sm) {
+// 769px - 1024px
+@mixin tablet-landscape {
+  @media only screen and (min-width: (size.$md + 1px)) and (max-width: size.$lg) {
     @content;
   }
 }
 
-@mixin extra-small-screen {
-  @media only screen and (max-width: size.$xs) {
+// 1025px +
+@mixin desktop {
+  @media only screen and (min-width: (size.$lg + 1px)) {
     @content;
   }
 }
 
-// @mixin mobile {
-//   @media only screen and (max-width: size.$sm) {
-//     @content;
-//   }
-// }
+@mixin section-landscape-layout($padding, $bg) {
+  background-color: $bg;
+  display: flex;
+  padding: $padding;
 
-// @mixin tablet {
-//   @media only screen and (min-width: (size.$sm + 1px)) and (max-width: size.$md) {
-//     @content;
-//   }
-// }
-
-// @mixin tablet-landscape {
-//   @media only screen and (min-width: (size.$md + 1px)) and (max-width: size.$lg) {
-//     @content;
-//   }
-// }
-
-// @mixin laptop {
-//   @media only screen and (min-width: (size.$lg + 1px)) and (max-width: size.$xl) {
-//     @content;
-//   }
-// }
-
-// @mixin desktop {
-//   @media only screen and (min-width: (size.$xl + 1px)) {
-//     @content;
-//   }
-// }
+  &__title {
+    width: 150px;
+    margin-right: 50px;
+    text-align: right;
+  }
+  &__content {
+    padding: 0;
+    width: 100%;
+  }
+}
