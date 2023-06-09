@@ -37,6 +37,40 @@
   font-size: 0.8rem;
   color: #4f5385;
 }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .project {
+    display: flex;
+  }
+  .project__screenshot {
+    width: 47%;
+  }
+  .project__content {
+    width: 47%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .project {
+    display: flex;
+  }
+  .project__screenshot {
+    width: 47%;
+  }
+  .project__content {
+    width: 47%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .project {
+    display: flex;
+  }
+  .project__screenshot {
+    width: 47%;
+  }
+  .project__content {
+    width: 47%;
+  }
+}
+
 .stacks {
   display: flex;
   flex-wrap: wrap;

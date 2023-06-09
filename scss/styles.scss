@@ -64,11 +64,11 @@ body {
   }
 
   @include mixins.tablet-landscape {
-    @include mixins.section-landscape-layout(3rem);
+    @include mixins.layout-section-landscape(3rem);
   }
 
   @include mixins.desktop {
-    @include mixins.section-landscape-layout(7rem);
+    @include mixins.layout-section-landscape(7rem);
   }
 
   &--intro {

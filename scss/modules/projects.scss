@@ -45,10 +45,13 @@
   }
 
   @include mixins.tablet {
+    @include mixins.layout-project-two-column;
   }
 
   @include mixins.tablet-landscape {
+    @include mixins.layout-project-two-column;
   }
   @include mixins.desktop {
+    @include mixins.layout-project-two-column;
   }
 }

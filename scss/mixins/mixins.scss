@@ -27,7 +27,7 @@
   }
 }
 
-@mixin section-landscape-layout($padding, $bg: white) {
+@mixin layout-section-landscape($padding, $bg: white) {
   background-color: $bg;
   display: flex;
   padding: $padding;
@@ -40,5 +40,17 @@
   &__content {
     padding: 0;
     width: 100%;
+  }
+}
+
+@mixin layout-project-two-column {
+  display: flex;
+
+  &__screenshot {
+    width: 47%;
+  }
+
+  &__content {
+    width: 47%;
   }
 }
