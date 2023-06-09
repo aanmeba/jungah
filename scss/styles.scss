@@ -4,13 +4,17 @@
 
 @use "./modules/projects.scss";
 @use "./modules/skills.scss";
+@use "./modules/navbar.scss";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0 auto;
 
   font-family: "Roboto Condensed", sans-serif;
   color: theme.$bright-navy;
-  // line-height: sizes.$line-height;
 
   @include mixins.tablet-landscape {
     width: 90vw;
@@ -20,31 +24,13 @@ body {
   }
 }
 
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: theme.$white;
-  ul {
-    @include mixins.ul-flex;
-    justify-content: space-around;
-    a {
-      text-decoration: none;
-      color: theme.$para-text;
-      &:hover {
-        color: theme.$highlighter;
-      }
-    }
-  }
-}
-
 .bold {
   font-weight: bold;
 }
 
 .section {
   padding: 3rem 2rem;
+  min-height: 60vh;
 
   &__title {
     font-family: "Bebas Neue", sans-serif;
@@ -120,7 +106,6 @@ body {
 .about {
   p {
     margin-top: 0;
-    // text-align: justify;
   }
 }
 
