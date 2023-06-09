@@ -1,9 +1,13 @@
+.project {
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
 .project__screenshot img {
   width: 100%;
 }
 .project__content {
   width: 90%;
-  margin: 0 auto;
+  margin: 0.1rem auto 0;
 }
 .project__content__title {
   font-family: "Bebas Neue", sans-serif;
@@ -46,6 +50,11 @@
   }
   .project__content {
     width: 47%;
+  }
+  .project__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -165,6 +174,12 @@ body {
 .section__content {
   padding: 2rem 0 0 2rem;
 }
+.section__content hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(19, 25, 84, 0.1);
+  margin: 1rem 0 2.5rem 0;
+}
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .section {
     background-color: white;
@@ -218,7 +233,16 @@ body {
   font-weight: 300;
   font-size: 1rem;
   margin: 0;
-  color: #696970;
+  color: rgba(19, 25, 84, 0.8);
+}
+.section .project:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+.section .project:nth-of-type(4) {
+  flex-direction: row-reverse;
+}
+.section .project:nth-of-type(6) {
+  flex-direction: row-reverse;
 }
 
 .about p {
@@ -230,6 +254,8 @@ footer {
   flex-direction: column;
   align-items: center;
   margin: 3rem auto;
+  color: rgba(19, 25, 84, 0.7);
+  font-size: 0.8rem;
 }
 footer .social {
   display: flex;

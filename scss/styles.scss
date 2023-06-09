@@ -58,6 +58,14 @@ body {
 
   &__content {
     padding: 2rem 0 0 2rem;
+
+    hr {
+      border: 0;
+      height: 0;
+
+      border-top: 1px solid rgba($color: theme.$bright-navy, $alpha: 0.1);
+      margin: 1rem 0 2.5rem 0;
+    }
   }
 
   @include mixins.tablet {
@@ -94,8 +102,18 @@ body {
       font-weight: 300;
       font-size: sizes.$text-normal;
       margin: 0;
-      color: theme.$desc-text;
+      color: rgba($color: theme.$bright-navy, $alpha: 0.8);
     }
+  }
+
+  .project:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+  .project:nth-of-type(4) {
+    flex-direction: row-reverse;
+  }
+  .project:nth-of-type(6) {
+    flex-direction: row-reverse;
   }
 }
 
@@ -111,6 +129,8 @@ footer {
   flex-direction: column;
   align-items: center;
   margin: 3rem auto;
+  color: rgba($color: theme.$bright-navy, $alpha: 0.7);
+  font-size: sizes.$text-small;
 
   .social {
     @include mixins.ul-flex;
