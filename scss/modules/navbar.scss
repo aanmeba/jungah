@@ -11,13 +11,11 @@ header {
   box-sizing: border-box;
 
   @include mixins.tablet-landscape {
-    width: inherit;
-    justify-content: flex-end;
+    @include mixins.layout-header;
   }
 
   @include mixins.desktop {
-    width: inherit;
-    justify-content: flex-end;
+    @include mixins.layout-header;
   }
 }
 

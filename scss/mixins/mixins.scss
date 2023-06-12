@@ -54,3 +54,20 @@
     width: 47%;
   }
 }
+
+@mixin layout-stack-category {
+  &__category {
+    width: 47%;
+  }
+}
+
+@mixin layout-header {
+  width: inherit;
+  justify-content: flex-end;
+}
+
+@mixin text-weight-size-margin($size, $margin: 0, $weight: 300) {
+  font-weight: $weight;
+  font-size: $size;
+  margin: $margin;
+}

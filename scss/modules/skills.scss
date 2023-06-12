@@ -28,19 +28,13 @@
   }
 
   @include mixins.tablet {
-    &__category {
-      width: 47%;
-    }
+    @include mixins.layout-stack-category;
   }
 
   @include mixins.tablet-landscape {
-    &__category {
-      width: 47%;
-    }
+    @include mixins.layout-stack-category;
   }
   @include mixins.desktop {
-    &__category {
-      width: 47%;
-    }
+    @include mixins.layout-stack-category;
   }
 }

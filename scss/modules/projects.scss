@@ -52,7 +52,6 @@
     @include mixins.layout-project-two-column;
 
     &__content {
-      // margin: ;
       display: flex;
       flex-direction: column;
       justify-content: center;

@@ -5,6 +5,7 @@
 @use "./modules/projects.scss";
 @use "./modules/skills.scss";
 @use "./modules/navbar.scss";
+@use "./modules/notice.scss";
 
 html {
   scroll-behavior: smooth;
@@ -14,6 +15,8 @@ body {
   margin: 0 auto;
 
   font-family: "Roboto Condensed", sans-serif;
+  line-height: sizes.$line-height;
+
   color: theme.$bright-navy;
 
   @include mixins.tablet-landscape {
@@ -30,7 +33,7 @@ body {
 
 .section {
   padding: 3rem 2rem;
-  min-height: 60vh;
+  min-height: 40vh;
 
   &__title {
     font-family: "Bebas Neue", sans-serif;
@@ -75,30 +78,19 @@ body {
     font-family: "Ubuntu", sans-serif;
 
     &__heading {
-      font-weight: 300;
-      font-size: sizes.$text-heading;
-      margin: 0;
+      @include mixins.text-weight-size-margin(sizes.$text-heading, 1rem 0 0 0);
     }
     &__subheading {
-      margin: 2rem 0 0 0;
-      font-weight: 300;
-      font-size: sizes.$text-label;
+      @include mixins.text-weight-size-margin(sizes.$text-label, 2rem 0 0 0);
     }
     &__text {
-      font-weight: 300;
-      font-size: sizes.$text-normal;
-      margin: 0;
+      @include mixins.text-weight-size-margin(sizes.$text-normal);
+
       color: rgba($color: theme.$bright-navy, $alpha: 0.8);
     }
   }
 
-  .project:nth-of-type(2) {
-    flex-direction: row-reverse;
-  }
-  .project:nth-of-type(4) {
-    flex-direction: row-reverse;
-  }
-  .project:nth-of-type(6) {
+  .project:nth-of-type(even) {
     flex-direction: row-reverse;
   }
 }
@@ -124,6 +116,9 @@ footer {
     &__item {
       padding: 1rem;
       text-transform: uppercase;
+      a {
+        font-size: 1rem;
+      }
     }
   }
 }
