@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&family=Roboto+Condensed&family=Ubuntu:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&family=Ubuntu:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -23,19 +23,30 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#tech">Tech Stacks</a></li>
-          <li><a href="#about">About</a></li>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__list__item">
+            <a href="#intro" class="navigation__list__item__link">Home</a>
+          </li>
+          <li class="navigation__list__item">
+            <a href="#tech" class="navigation__list__item__link">Tech Stacks</a>
+          </li>
+          <li class="navigation__list__item">
+            <a href="#projects" class="navigation__list__item__link"
+              >Projects</a
+            >
+          </li>
+          <li class="navigation__list__item">
+            <a href="#about" class="navigation__list__item__link">About</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="intro" class="section section--intro">
+        <h1 class="section--intro__heading">Hello world!</h1>
         <h1 class="section--intro__heading">
-          Hello, I'm <span class="bold">Jungah Ahn</span>👩🏻‍💻
+          I'm <span class="bold">Jungah Ahn</span>👩🏻‍💻
         </h1>
         <h2 class="section--intro__subheading">Junior full-stack developer</h2>
         <p class="section--intro__text">
@@ -45,43 +56,36 @@
       <section id="tech" class="section section--tech">
         <h2 class="section__title">tech stacks</h2>
         <div class="section__content">
-          <div class="skills">
-            <div class="skills__category">
-              <p class="skills__category__label">Languages</p>
+          <div class="stacks">
+            <div class="stacks__category">
+              <p class="stacks__category__label">Languages</p>
               <ul>
-                <li>HTML</li>
-                <li>CSS/SCSS</li>
+                <li>HTML/CSS</li>
                 <li>JavaScript</li>
                 <li>TypeScript</li>
                 <li>Ruby</li>
                 <li>Java</li>
               </ul>
             </div>
-            <div class="skills__category">
-              <p class="skills__category__label">Frameworks & Libraries</p>
+            <div class="stacks__category">
+              <p class="stacks__category__label">Frameworks & Libraries</p>
               <ul>
+                <li>SCSS</li>
                 <li>Bootstrap</li>
                 <li>Material UI</li>
-                <li>Styled-components</li>
+                <li>Styled Components</li>
                 <li>React</li>
                 <li>Rails</li>
                 <li>Spring</li>
               </ul>
             </div>
-            <div class="skills__category">
-              <p class="skills__category__label">Database</p>
-              <ul>
-                <li>PostgreSQL</li>
-                <li>GraphQL</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-            <div class="skills__category">
-              <p class="skills__category__label">Tools</p>
+            <div class="stacks__category">
+              <p class="stacks__category__label">Tools</p>
               <ul>
                 <li>Git</li>
                 <li>Github</li>
                 <li>Terminal</li>
+                <li>PostgreSQL</li>
               </ul>
             </div>
           </div>
@@ -90,6 +94,11 @@
       <section id="projects" class="section section--projects">
         <h2 class="section__title">projects</h2>
         <div class="section__content">
+          <div class="notice">
+            <p class="notice__text">
+              *It may take seconds to load the deployed apps after inactivity
+            </p>
+          </div>
           <div class="project">
             <div class="project__screenshot">
               <img src="./img/img_ilink.png" alt="ilink" />
@@ -118,9 +127,9 @@
               </div>
               <div class="project__content__specs">
                 <p class="project__content__desc">
-                  A full stack app inspired by Linktree using React.js for
-                  frontend and Rails API for backend, deployed with netlify for
-                  frontend and heroku for backend
+                  An web app for users to create an online presence with curated
+                  links and a unique profile link for each account, serving as a
+                  personalised landing page
                 </p>
                 <ul class="project__content__stacks">
                   <li>React.js</li>
@@ -134,6 +143,125 @@
               </div>
             </div>
           </div>
+          <hr />
+          <div class="project">
+            <div class="project__screenshot">
+              <img src="./img/img_simple.png" alt="Simple Memo App" />
+            </div>
+            <div class="project__content">
+              <div class="project__content__header">
+                <h3 class="project__content__title">Simple Memo App</h3>
+                <ul class="project__content__links">
+                  <li>
+                    <a
+                      href="https://github.com/aanmeba/simple-memo-client"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://simple-memo.netlify.app/"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-solid fa-rocket"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="project__content__specs">
+                <p class="project__content__desc">
+                  A straightforward memo tool for users to jot down things in a
+                  simple list format
+                </p>
+                <ul class="project__content__stacks">
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>Node</li>
+                  <li>Express</li>
+                  <li>MongoDB Atlas</li>
+                  <li>MUI</li>
+                  <li>Render</li>
+                  <li>Netlify</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="project">
+            <div class="project__screenshot">
+              <img src="./img/img_ifund.png" alt="iFund" />
+            </div>
+            <div class="project__content">
+              <div class="project__content__header">
+                <h3 class="project__content__title">iFund</h3>
+                <ul class="project__content__links">
+                  <li>
+                    <a
+                      href="https://github.com/aanmeba/iFund"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ifund-app.herokuapp.com/"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-solid fa-rocket"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="project__content__specs">
+                <p class="project__content__desc">
+                  A two-sided crowdfunding website for users to CRUD or donate
+                  funding projects
+                </p>
+                <ul class="project__content__stacks">
+                  <li>Ruby on Rails</li>
+                  <li>JavaScript</li>
+                  <li>PostgreSQL</li>
+                  <li>Stripe</li>
+                  <li>Bootstrap</li>
+                  <li>Heroku</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="project">
+            <div class="project__screenshot">
+              <img src="./img/img_terminal.png" alt="Split The Bill" />
+            </div>
+            <div class="project__content">
+              <div class="project__content__header">
+                <h3 class="project__content__title">Split The Bill</h3>
+                <ul class="project__content__links">
+                  <li>
+                    <a
+                      href="https://github.com/aanmeba/t1a3_termianl_app"
+                      class="project__content__link"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="project__content__specs">
+                <p class="project__content__desc">
+                  A terminal app for users to divide the total amount with 3
+                  options - split randomly, split equally, and split manually
+                </p>
+                <ul class="project__content__stacks">
+                  <li>Ruby</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -142,17 +270,16 @@
         <div class="section__content">
           <div class="about">
             <p>
-              I'm Jungah Ahn, a tech-loving junior full-stack developer on a
-              quest for knowledge and creativity. With a background in activism
-              and translation, I bring a fresh perspective to my coding
-              adventures, crafting innovative digital experiences along the way.
+              I'm Jungah, a growth-minded junior full-stack developer with a
+              diverse background in activism and translation. I embrace new
+              challenges and continuously strive for personal and professional
+              growth.
             </p>
             <p>
-              I enjoy running and trail running. You can see me running or
-              volunteering (almost) every Saturday at Rhodes Parkrun. In 2023,
-              I've done my first 50 km trail running race in the Blue Mountains
-              on May and I'll complete my first full marathorn, 42.195 km, on
-              September. Wish me luck!
+              I enjoy running! You can see me running or volunteering (almost)
+              every Saturday at Rhodes Parkrun. In 2023, my goal is to complete
+              a full marathorn distance, 42.195km without any injury. Wish me
+              luck!
             </p>
           </div>
         </div>
@@ -161,17 +288,25 @@
     <footer>
       <ul class="social">
         <li class="social__item">
-          <a href="https://www.github.com/aanmeba"
+          <a
+            href="https://www.github.com/aanmeba"
+            target="_blank"
+            title="Github"
             ><i class="fa-brands fa-github"></i
           ></a>
         </li>
         <li class="social__item">
-          <a href="https://www.linkedin.com/ajungah"
+          <a
+            href="https://www.linkedin.com/in/ajungah/"
+            target="_blank"
+            title="LinkedIn"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </li>
         <li class="social__item">
-          <a href="https://www.google.com/"><i class="fa-solid fa-file"></i></a>
+          <a href="./file/Jungah-Resume.pdf" target="_blank" title="Resume"
+            ><i class="fa-solid fa-file"></i
+          ></a>
         </li>
       </ul>
       <p class="copyright">© Jungah Ahn 2023</p>

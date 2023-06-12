@@ -1,0 +1,9 @@
+@use "../theme/theme" as theme;
+.notice {
+  &__text {
+    margin: 0 0 1rem 1rem;
+    color: theme.very-light-navy(0.5);
+    font-size: 0.7rem;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../theme/theme" as theme;
+@use "../mixins/mixins";
+
+header {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: theme.$white;
+  box-sizing: border-box;
+
+  @include mixins.tablet-landscape {
+    @include mixins.layout-header;
+  }
+
+  @include mixins.desktop {
+    @include mixins.layout-header;
+  }
+}
+
+.navigation {
+  &__list {
+    @include mixins.ul-flex;
+    justify-content: space-around;
+    &__item {
+      display: flex;
+      align-items: center;
+      &__link {
+        text-decoration: none;
+        text-align: center;
+        color: theme.$bright-navy;
+        transition: all ease-out 250ms;
+        padding: 0 1rem;
+
+        &:hover {
+          color: theme.$highlighter;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: theme.$highlighter;
+  font-weight: 600;
+}

@@ -1,0 +1,40 @@
+@use "../mixins/mixins";
+@use "../theme/theme" as theme;
+@use "../theme/sizes" as sizes;
+
+.stacks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__category {
+    width: 90%;
+    margin-bottom: 2rem;
+
+    &__label {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: sizes.$text-label;
+      line-height: sizes.$line-height;
+      margin: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include mixins.tablet {
+    @include mixins.layout-stack-category;
+  }
+
+  @include mixins.tablet-landscape {
+    @include mixins.layout-stack-category;
+  }
+  @include mixins.desktop {
+    @include mixins.layout-stack-category;
+  }
+}

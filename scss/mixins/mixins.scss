@@ -6,50 +6,68 @@
   padding-left: 0;
 }
 
-@mixin large-screen {
-  @media only screen and (min-width: size.$md) {
+// 481px - 767px
+@mixin tablet {
+  @media only screen and (min-width: (size.$sm + 1px)) and (max-width: size.$md) {
     @content;
   }
 }
 
-@mixin narrow-screen {
-  @media only screen and (min-width: (size.$xs + 1px)) and (max-width: size.$sm) {
+// 769px - 1024px
+@mixin tablet-landscape {
+  @media only screen and (min-width: (size.$md + 1px)) and (max-width: size.$lg) {
     @content;
   }
 }
 
-@mixin extra-small-screen {
-  @media only screen and (max-width: size.$xs) {
+// 1025px +
+@mixin desktop {
+  @media only screen and (min-width: (size.$lg + 1px)) {
     @content;
   }
 }
 
-// @mixin mobile {
-//   @media only screen and (max-width: size.$sm) {
-//     @content;
-//   }
-// }
+@mixin layout-section-landscape($padding, $bg: white) {
+  background-color: $bg;
+  display: flex;
+  padding: $padding;
 
-// @mixin tablet {
-//   @media only screen and (min-width: (size.$sm + 1px)) and (max-width: size.$md) {
-//     @content;
-//   }
-// }
+  &__title {
+    width: 150px;
+    margin-right: 50px;
+    text-align: right;
+  }
+  &__content {
+    padding: 0;
+    width: 100%;
+  }
+}
 
-// @mixin tablet-landscape {
-//   @media only screen and (min-width: (size.$md + 1px)) and (max-width: size.$lg) {
-//     @content;
-//   }
-// }
+@mixin layout-project-two-column {
+  display: flex;
 
-// @mixin laptop {
-//   @media only screen and (min-width: (size.$lg + 1px)) and (max-width: size.$xl) {
-//     @content;
-//   }
-// }
+  &__screenshot {
+    width: 47%;
+  }
 
-// @mixin desktop {
-//   @media only screen and (min-width: (size.$xl + 1px)) {
-//     @content;
-//   }
-// }
+  &__content {
+    width: 47%;
+  }
+}
+
+@mixin layout-stack-category {
+  &__category {
+    width: 47%;
+  }
+}
+
+@mixin layout-header {
+  width: inherit;
+  justify-content: flex-end;
+}
+
+@mixin text-weight-size-margin($size, $margin: 0, $weight: 300) {
+  font-weight: $weight;
+  font-size: $size;
+  margin: $margin;
+}
