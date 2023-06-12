@@ -43,7 +43,8 @@
       li {
         margin-right: 0.7rem;
         font-size: sizes.$text-small;
-        color: theme.$light-navy;
+        color: theme.very-light-navy();
+        line-height: 1rem;
       }
     }
   }

@@ -1,8 +1,7 @@
 $white: #fff;
 $highlighter: #30f6af;
-$dark-navy: #0c0e20;
 $bright-navy: #131954;
-$light-navy: #4f5385;
 
-$para-text: #444452;
-$desc-text: #696970;
+@function very-light-navy($opacity: 0.5, $color: $bright-navy) {
+  @return rgba($color: $color, $alpha: $opacity);
+}

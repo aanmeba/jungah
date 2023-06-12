@@ -3,7 +3,7 @@
 @use "./theme/sizes" as sizes;
 
 @use "./modules/projects.scss";
-@use "./modules/skills.scss";
+@use "./modules/stacks.scss";
 @use "./modules/navbar.scss";
 @use "./modules/notice.scss";
 
@@ -52,7 +52,7 @@ body {
       border: 0;
       height: 0;
 
-      border-top: 1px solid rgba($color: theme.$bright-navy, $alpha: 0.1);
+      border-top: 1px solid theme.very-light-navy(0.1);
       margin: 1rem 0 2.5rem 0;
     }
   }
@@ -86,7 +86,7 @@ body {
     &__text {
       @include mixins.text-weight-size-margin(sizes.$text-normal);
 
-      color: rgba($color: theme.$bright-navy, $alpha: 0.8);
+      color: theme.very-light-navy(0.8);
     }
   }
 
@@ -106,13 +106,14 @@ footer {
   flex-direction: column;
   align-items: center;
   margin: 3rem auto;
-  color: rgba($color: theme.$bright-navy, $alpha: 0.7);
+  color: theme.very-light-navy();
   font-size: sizes.$text-small;
 
   .social {
     @include mixins.ul-flex;
 
     margin: 0;
+
     &__item {
       padding: 1rem;
       text-transform: uppercase;
