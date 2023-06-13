@@ -2,6 +2,8 @@
 
 This is a portfolio website where you can discover more about me, my tech stacks, and the featured projects I've worked on.
 
+👉 [Check out my live portfolio](https://aanmeba.github.io/jungah/)
+
 ## Features
 
 - Utilised SCSS for styling, following the BEM naming convention
