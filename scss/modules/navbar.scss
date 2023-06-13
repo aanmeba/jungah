@@ -33,6 +33,11 @@ header {
         transition: all ease-out 250ms;
         padding: 0 1rem;
 
+        &--active {
+          color: theme.$highlighter;
+          font-weight: 600;
+        }
+
         &:hover {
           color: theme.$highlighter;
           text-decoration: underline;
@@ -40,9 +45,4 @@ header {
       }
     }
   }
-}
-
-.active {
-  color: theme.$highlighter;
-  font-weight: 600;
 }

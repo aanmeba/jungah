@@ -2,7 +2,7 @@ const sections = document.querySelectorAll("section[id]");
 window.addEventListener("scroll", navHighlighter);
 
 function navHighlighter() {
-  let scrollY = window.pageYOffset;
+  let { scrollY } = window;
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
@@ -12,11 +12,11 @@ function navHighlighter() {
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
         .querySelector(".navigation a[href*=" + sectionId + "]")
-        .classList.add("active");
+        .classList.add("navigation__list__item__link--active");
     } else {
       document
         .querySelector(".navigation a[href*=" + sectionId + "]")
-        .classList.remove("active");
+        .classList.remove("navigation__list__item__link--active");
     }
   });
 }
